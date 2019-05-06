@@ -1,6 +1,4 @@
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\Block_32.xnb
-C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\IdleGunWomanSheet.xnb
-C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\WalkLeftWomanSheet.xnb
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Arsenal.exe
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Arsenal.pdb
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\MonoGame.Framework.dll
@@ -26,6 +24,10 @@ C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.csproj.CoreCo
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.csproj.CopyComplete
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.exe
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.pdb
-C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\KnightFace.xnb
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\GunWoman\GunWoman\gunwomanIDLE-sheet.xnb
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\GunWoman\GunWoman\gunwomanWALK-sheet.xnb
+C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Newtonsoft.Json.pdb
+C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\GunWomanSheet.xnb
+C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\File.xnb

@@ -10,11 +10,12 @@ namespace Arsenal.InteractableObject
     {
         public enum StateOfObject
         {
-            Walking,
-            Idle,
+            WALK,
+            IDLE,
             Runing,
-            Shooting,
-            Jumping,
+            SHOOTING,
+            JUMPING,
+            ATTACK,
         }
     }
 }
