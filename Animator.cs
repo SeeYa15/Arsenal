@@ -17,7 +17,7 @@ namespace Arsenal
         private int _frameUpdateSpeed;
         private int _timeSinceLastFrame;
         private Texture2D pixel;
-        private SpriteBatch _spriteBatch;
+        private SpriteBatch _spriteBatch;       
         private Dictionary<StateOfObject, Texture2D> _animationDictionary;
         private StateOfObject _currentstate;
 
