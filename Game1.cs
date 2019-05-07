@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Arsenal.Player;
+using System;
 
 namespace Arsenal
 {
@@ -11,9 +13,18 @@ namespace Arsenal
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Board gameboard;
+        /*Tiles*/
+        Tile blockTile;
+        /*Sprites*/
+        Player.Player _player;
+
+
+        float tempy, tempx;
 
         public Game1()
         {
+            //TargetElapsedTime = new TimeSpan(0, 0, 0, 0, 100);
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
@@ -26,8 +37,28 @@ namespace Arsenal
         /// </summary>
         protected override void Initialize()
         {
+            float ScreenWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            float ScreenHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;            
+            
             // TODO: Add your initialization logic here
-
+            tempx = ScreenWidth / 32.0f;
+            tempy = ScreenHeight / 32.0f;
+            if (tempx == Math.Floor(tempx) && tempy == Math.Floor(tempy))
+            {
+                graphics.PreferredBackBufferHeight = (int)ScreenHeight;
+                graphics.PreferredBackBufferWidth = (int)ScreenWidth;
+            }
+            //else
+            //{
+            //    tempx = (int)ScreenWidth / 32;
+            //    tempy = (int)ScreenHeight / 32;
+            //    ScreenWidth = tempx * 32;
+            //    ScreenHeight = tempy * 32;
+            //    graphics.ToggleFullScreen();
+            //}
+            graphics.PreferredBackBufferHeight = (int)ScreenHeight;
+            graphics.PreferredBackBufferWidth = (int)ScreenWidth;
+            graphics.ApplyChanges();
             base.Initialize();
         }
 
@@ -37,10 +68,14 @@ namespace Arsenal
         /// </summary>
         protected override void LoadContent()
         {
+            var asdasd = Content.Load<Texture2D>("Block_32");
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
+            gameboard = new Board(Content.Load<Texture2D>("Block_32"), (int)tempy,(int)tempx, spriteBatch);
+            //_player = new Player.Player(new Vector2(300),Content.Load<Texture2D>("IdleGunWomanSheettetete"),spriteBatch);           
+            _player = new Player.Player(new Vector2(300), Content.Load<Texture2D>("GunWoman/GunWoman/gunwomanIDLE-sheet"), spriteBatch, this, 5,5,22);
+            gameboard.GenerateRandomBoard();
+            //var uri = new Uri("./Content/GunWoman/gunwomanIDLE.sheet", UriKind.Relative).ToString();
         }
 
         /// <summary>
@@ -62,8 +97,9 @@ namespace Arsenal
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            // TODO: Add your update logic here 
 
+            _player.KeyboardInput(gameTime);
             base.Update(gameTime);
         }
 
@@ -77,6 +113,8 @@ namespace Arsenal
 
             // TODO: Add your drawing code here
 
+            _player.Draw();
+            gameboard.Draw();
             base.Draw(gameTime);
         }
     }
