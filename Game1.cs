@@ -14,17 +14,18 @@ namespace Arsenal
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Board gameboard;
+        Texture2D pixel;
         /*Tiles*/
         Tile blockTile;
         /*Sprites*/
         Player.Player _player;
-
+        SpriteFont _sf;
 
         float tempy, tempx;
 
         public Game1()
         {
-            //TargetElapsedTime = new TimeSpan(0, 0, 0, 0, 100);
+            //TargetElapsedTime = new TimeSpan(0, 0, 0, 0, 200);
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
@@ -68,14 +69,15 @@ namespace Arsenal
         /// </summary>
         protected override void LoadContent()
         {
-            var asdasd = Content.Load<Texture2D>("Block_32");
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            gameboard = new Board(Content.Load<Texture2D>("Block_32"), (int)tempy,(int)tempx, spriteBatch);
-            //_player = new Player.Player(new Vector2(300),Content.Load<Texture2D>("IdleGunWomanSheettetete"),spriteBatch);           
-            _player = new Player.Player(new Vector2(300), Content.Load<Texture2D>("GunWoman/GunWoman/gunwomanIDLE-sheet"), spriteBatch, this, 5,5,22);
+            _sf = Content.Load<SpriteFont>("File");
+            _player = new Player.Player(new Vector2(500), spriteBatch, this, _sf, GraphicsDevice);
+
+            gameboard = new Board(Content.Load<Texture2D>("Block_32"), (int)tempy, (int)tempx, spriteBatch);
             gameboard.GenerateRandomBoard();
             //var uri = new Uri("./Content/GunWoman/gunwomanIDLE.sheet", UriKind.Relative).ToString();
+            
         }
 
         /// <summary>
@@ -112,10 +114,9 @@ namespace Arsenal
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
-            _player.Draw();
+            _player.Draw(gameTime);
             gameboard.Draw();
             base.Draw(gameTime);
-        }
+        }        
     }
 }

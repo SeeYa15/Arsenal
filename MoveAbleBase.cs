@@ -12,12 +12,12 @@ namespace Arsenal
     /// This class is for handling movement-based action. General gravity, Speed. Maybe change class name
     /// </summary>
     /// 
-    class MoveAbleBase : Sprite
+    class MoveAbleBase
     {
         public Vector2 Movement;
         private Board _gameboard;
 
-        public MoveAbleBase(Vector2 position, Texture2D texture, SpriteBatch spriteBatch) : base(position, texture, spriteBatch)
+        public MoveAbleBase(Vector2 position, Texture2D texture, SpriteBatch spriteBatch)
         {
         }
 
