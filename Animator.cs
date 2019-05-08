@@ -70,7 +70,7 @@ namespace Arsenal
             }
             else { _spriteBatch.Draw(ct.Texture, position, new Rectangle(new Point(t.x, t.y), new Point(t.width, t.height)), Color.White, 0, origin, 1, SpriteEffects.None, 1); }
 
-            DrawBorder(new Rectangle(new Point((int)position.X, (int)position.Y), new Point(t.width, t.height)), 1, Color.Black,position);
+            DrawBorder(new Rectangle(new Point((int)position.X, (int)position.Y), new Point(t.width, t.height)), 1, Color.Black, position);
 
             _spriteBatch.End();
         }
@@ -106,21 +106,15 @@ namespace Arsenal
         private void DrawBorder(Rectangle rectangleToDraw, int thicknessOfBorder, Color borderColor, Vector2 position)
         {
             // Draw top line
-            _spriteBatch.Draw(pixel, position ,new Rectangle(rectangleToDraw.X, rectangleToDraw.Y, rectangleToDraw.Width, thicknessOfBorder), borderColor);
+            _spriteBatch.Draw(pixel,new Rectangle((int)position.X-rectangleToDraw.Width, (int)position.Y-rectangleToDraw.Height, rectangleToDraw.Width, thicknessOfBorder), borderColor);
 
             // Draw left line
-            _spriteBatch.Draw(pixel, position, new Rectangle(rectangleToDraw.X, rectangleToDraw.Y, thicknessOfBorder, rectangleToDraw.Height), borderColor);
+            _spriteBatch.Draw(pixel,new Rectangle((int)position.X-rectangleToDraw.Width, (int)position.Y-rectangleToDraw.Height, thicknessOfBorder, rectangleToDraw.Height), borderColor);
 
-            // Draw right line
-            _spriteBatch.Draw(pixel, position, new Rectangle((rectangleToDraw.X + rectangleToDraw.Width - thicknessOfBorder),
-                                            rectangleToDraw.Y,
-                                            thicknessOfBorder,
-                                            rectangleToDraw.Height), borderColor);
-            // Draw bottom line
-            _spriteBatch.Draw(pixel, position, new Rectangle(rectangleToDraw.X,
-                                            rectangleToDraw.Y + rectangleToDraw.Height - thicknessOfBorder,
-                                            rectangleToDraw.Width,
-                                            thicknessOfBorder), borderColor);
+            //// Draw right line
+            _spriteBatch.Draw(pixel,new Rectangle((int)position.X,(int)position.Y-rectangleToDraw.Height,thicknessOfBorder,rectangleToDraw.Height), borderColor);
+            //// Draw bottom line
+            _spriteBatch.Draw(pixel,new Rectangle((int)position.X-rectangleToDraw.Width,(int)position.Y,rectangleToDraw.Width,thicknessOfBorder), borderColor);
         }
     }
     public static class GG

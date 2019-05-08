@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/Johnny/source/repos/Arsenal/Arsenal/Content/GunWoman/GunWoman/gunwomanIDLE-sheet.png</SourceFile>
-  <SourceTime>2019-02-20T09:18:50.3764001+01:00</SourceTime>
+  <SourceTime>2019-05-07T16:01:17.2378718+02:00</SourceTime>
   <DestFile>C:/Users/Johnny/source/repos/Arsenal/Arsenal/Content/bin/Windows/GunWoman/GunWoman/gunwomanIDLE-sheet.xnb</DestFile>
-  <DestTime>2019-02-25T14:49:17.87231+01:00</DestTime>
+  <DestTime>2019-05-08T09:57:08.0290583+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -19,7 +19,6 @@ C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\SharpDX.Direc
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
-C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.csprojAssemblyReference.cache
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.csproj.CoreCompileInputs.cache
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.csproj.CopyComplete
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.exe
@@ -31,3 +30,4 @@ C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Newtonsoft.Js
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Newtonsoft.Json.xml
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\GunWomanSheet.xnb
 C:\Users\Johnny\source\repos\Arsenal\Arsenal\bin\Windows\x86\Debug\Content\File.xnb
+C:\Users\Johnny\source\repos\Arsenal\Arsenal\obj\x86\Debug\Arsenal.csprojAssemblyReference.cache
